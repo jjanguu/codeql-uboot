@@ -2,6 +2,6 @@ import cpp
 
 from MacroInvocation call
 where
-call.getMacro().getName().regexpMatch("ntoh(s|l|ll)")
+call.getMacro().getName() in ["ntohs", "ntohl", "ntohll"]
 
-select call
+select call.getExpr()
